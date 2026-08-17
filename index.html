@@ -147,8 +147,13 @@
     max-width:14ch;
   }
   .hero .tagline{
-    font-size:clamp(16px, 3vw, 19px);
-    color:#B7C4CA;
+    display:inline-block;
+    font-size:clamp(15px, 2.6vw, 17px);
+    font-weight:600;
+    color:var(--ink);
+    background:#FFFFFF;
+    padding:10px 18px;
+    border-radius:6px;
     max-width:46ch;
     margin-bottom:36px;
   }
@@ -176,8 +181,21 @@
     font-weight:600;
     margin-bottom:14px;
   }
-  .about h2{font-size:clamp(26px,5vw,32px); margin-bottom:22px; color:var(--navy);}
+  .about h2{font-size:clamp(26px,5vw,32px); margin-bottom:22px; color:var(--navy); text-transform:uppercase;}
   .section-title{font-size:clamp(26px,5vw,32px); margin-bottom:22px; color:var(--navy);}
+  .label-tag{
+    display:inline-block;
+    font-family:'Inter', sans-serif;
+    font-size:12.5px;
+    letter-spacing:0.1em;
+    text-transform:uppercase;
+    font-weight:700;
+    color:var(--ink);
+    background:var(--amber);
+    padding:6px 14px;
+    border-radius:100px;
+    margin-bottom:18px;
+  }
   .about p{color:var(--ink-soft); max-width:62ch; font-size:15.5px; margin-bottom:36px;}
 
   .stat-grid{
@@ -257,6 +275,20 @@
   }
 
   /* SKILLS */
+  .skills{background:var(--amber);}
+  .grey-tag{
+    display:inline-block;
+    font-family:'Inter', sans-serif;
+    font-size:12.5px;
+    letter-spacing:0.1em;
+    text-transform:uppercase;
+    font-weight:700;
+    color:#FFFFFF;
+    background:#4A4A4A;
+    padding:6px 14px;
+    border-radius:100px;
+    margin-bottom:18px;
+  }
   .skill-row{margin-bottom:22px;}
   .skill-top{
     display:flex; justify-content:space-between;
@@ -344,7 +376,7 @@
 <section class="hero">
   <div class="container hero-inner">
     <div class="eyebrow">Industrial Chemistry Graduate</div>
-    <h1>Abdullahi Ibrahim Opeyemi</h1>
+    <h1>Abdullahi<br>Ibrahim<br>Opeyemi</h1>
     <p class="tagline">Precision-driven chemist exploring Quality Control, teaching, and design.</p>
     <div class="btn-row">
       <a href="#contact" class="btn btn-primary">Get In Touch</a>
@@ -355,8 +387,8 @@
 
 <section class="about" id="about">
   <div class="container">
-    <div class="section-label">About</div>
-    <h2>A little about me</h2>
+    <div class="label-tag">About</div>
+    <h2>A LITTLE ABOUT ME</h2>
     <p>
       I'm Abdullahi Ibrahim Opeyemi, an Industrial Chemistry graduate from the
       University of Ilorin, based in Ilorin, Kwara State. Guided by my faith,
@@ -394,13 +426,26 @@
         </ul>
       </div>
     </div>
+
+    <div class="exp-card" style="margin-top:20px;">
+      <div class="exp-mark">SS</div>
+      <div>
+        <h3>Chemistry Teacher</h3>
+        <div class="exp-meta">NYSC · Secondary School · 2025 – 2026</div>
+        <ul>
+          <li>Taught Chemistry to secondary school students as part of NYSC service.</li>
+          <li>Broke down chemistry concepts into simple, relatable terms to improve student understanding.</li>
+          <li>Prepared lesson notes and assessed student progress throughout the service year.</li>
+        </ul>
+      </div>
+    </div>
   </div>
 </section>
 
 <section class="skills" id="skills">
   <div class="container">
-    <div class="section-label">Skills</div>
-    <h2 class="section-title" style="margin-bottom:30px;">What I bring to the table</h2>
+    <div class="grey-tag">Skills</div>
+    <h2 class="section-title" style="margin-bottom:30px; font-style:italic;">What I bring to the table</h2>
 
     <div class="skill-row">
       <div class="skill-top"><span class="name">Chemistry &amp; Mathematics Tutoring</span><span class="pct">78%</span></div>
@@ -431,13 +476,13 @@
     <h2>Let's connect</h2>
     <p>Open to Quality Control roles, tutoring opportunities, and design work. Reach out through either channel below.</p>
     <div class="contact-grid">
+      <a class="contact-card" href="https://wa.me/2349069483334?text=Good%20day%20Abdullahi%2C%20I%20came%20across%20your%20portfolio%20website%20and%20I%27d%20like%20to%20connect%20with%20you." target="_blank" rel="noopener">
+        <div class="ctype">WhatsApp</div>
+        <div class="cval">+234 906 948 3334</div>
+      </a>
       <a class="contact-card" href="mailto:abdullahiibrahim1204@gmail.com">
         <div class="ctype">Email</div>
         <div class="cval">abdullahiibrahim1204@gmail.com</div>
-      </a>
-      <a class="contact-card" href="https://wa.me/2349069483334" target="_blank" rel="noopener">
-        <div class="ctype">WhatsApp</div>
-        <div class="cval">+234 906 948 3334</div>
       </a>
     </div>
   </div>
@@ -475,4 +520,4 @@
 </script>
 
 </body>
-</html>
+      </html>
