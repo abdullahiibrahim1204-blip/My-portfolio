@@ -10,9 +10,9 @@
 <meta property="og:description" content="Industrial Chemistry graduate exploring Quality Control, tutoring, and graphic design.">
 <meta property="og:type" content="website">
 <!-- Replace the two lines below with your real GitHub Pages link once live -->
-<meta property="og:url" content="https://yourusername.github.io/your-repo/">
-<meta property="og:image" content="https://yourusername.github.io/your-repo/preview.png">
-<link rel="canonical" href="https://yourusername.github.io/your-repo/">
+<meta property="og:url" content="https://abdullahiibrahim1204-blip.github.io/">
+<meta property="og:image" content="https://abdullahiibrahim1204-blip.github.io/preview.png">
+<link rel="canonical" href="https://abdullahiibrahim1204-blip.github.io/">
 
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%230F2A3B'/%3E%3Ctext x='32' y='42' font-family='Georgia,serif' font-size='26' fill='%23E8B559' text-anchor='middle'%3EAIO%3C/text%3E%3C/svg%3E">
 
@@ -313,7 +313,11 @@
     border-radius:100px;
     background:linear-gradient(90deg, var(--teal), var(--amber));
     width:0%;
-    transition:width 1.1s cubic-bezier(0.4,0,0.2,1);
+    animation:fillBar 1.2s cubic-bezier(0.4,0,0.2,1) forwards 0.3s;
+  }
+  @keyframes fillBar{
+    from{width:0%;}
+    to{width:var(--fill-width, 70%);}
   }
 
   /* BOOKING */
@@ -481,23 +485,23 @@
 
     <div class="skill-row">
       <div class="skill-top"><span class="name">Chemistry &amp; Mathematics Tutoring</span><span class="pct">78%</span></div>
-      <div class="bar-track"><div class="bar-fill" data-width="78"></div></div>
+      <div class="bar-track"><div class="bar-fill" style="--fill-width:78%;"></div></div>
     </div>
     <div class="skill-row">
       <div class="skill-top"><span class="name">Graphic Design (PixelLab / Canva)</span><span class="pct">75%</span></div>
-      <div class="bar-track"><div class="bar-fill" data-width="75"></div></div>
+      <div class="bar-track"><div class="bar-fill" style="--fill-width:75%;"></div></div>
     </div>
     <div class="skill-row">
       <div class="skill-top"><span class="name">Quality Control Testing</span><span class="pct">60%</span></div>
-      <div class="bar-track"><div class="bar-fill" data-width="60"></div></div>
+      <div class="bar-track"><div class="bar-fill" style="--fill-width:60%;"></div></div>
     </div>
     <div class="skill-row">
       <div class="skill-top"><span class="name">UV-Vis Spectrophotometry</span><span class="pct">60%</span></div>
-      <div class="bar-track"><div class="bar-fill" data-width="60"></div></div>
+      <div class="bar-track"><div class="bar-fill" style="--fill-width:60%;"></div></div>
     </div>
     <div class="skill-row">
       <div class="skill-top"><span class="name">ASTM Test Methods</span><span class="pct">55%</span></div>
-      <div class="bar-track"><div class="bar-fill" data-width="55"></div></div>
+      <div class="bar-track"><div class="bar-fill" style="--fill-width:55%;"></div></div>
     </div>
   </div>
 </section>
@@ -542,6 +546,7 @@
 <footer></footer>
 
 <script>
+  // Mobile menu toggle
   var menuBtn = document.getElementById('menuBtn');
   var navLinks = document.getElementById('navLinks');
   menuBtn.addEventListener('click', function(){
@@ -550,4 +555,13 @@
     menuBtn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
   });
   navLinks.querySelectorAll('a').forEach(function(link){
-    link.addEventListener('click', function(
+    link.addEventListener('click', function(){
+      navLinks.classList.remove('open');
+      menuBtn.classList.remove('open');
+      menuBtn.setAttribute('aria-expanded', 'false');
+    });
+  });
+</script>
+
+</body>
+</html>
